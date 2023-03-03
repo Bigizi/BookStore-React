@@ -29,25 +29,24 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Math-Magician-React Project <a name="about-project"></a>
+# 📖 Book-Store-React Project <a name="about-project"></a>
 
-**Javascript Capstone Project** is a single webpage  Application that displays a calculator enable users to perform math operation.
+**Javascript Capstone Project** is a single webpage  Application that displays the book and the author.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ***For this project we used the Following tech-stack:
 
 - JSX
+- CSS
 - React JS
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
--[x] **Home**
--[x] **Calculator**
--[x] **Math Quotes**
-
+-[x] **Books**
+-[x] **Categories**
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
@@ -85,8 +84,8 @@ Clone this repository to your desired folder using the command below:
 ### Clone this repository
 
 ```bash
-$ git clone https://github.com/Bigizi/Math-Magician-React-App
-$ cd Math-Magician-React-App
+$ git clone https://github.com/Bigizi/BookStore-React
+$ cd BookStore-React
 ```
 
 ### Install
@@ -123,11 +122,6 @@ $ npm start
 
 - GitHub: [@Crispin](https://github.com/Bigizi)
 - LinkedIn: [@Crispin](https://linkedin.com/)
-  
-👤 **Racheal Appiah-kubi**
-
-- GitHub: [@Crispin](https://github.com/coderacheal)
-- LinkedIn: [@Crispin](https://linkedin.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -144,7 +138,7 @@ $ npm start
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [Issues](https://github.com/Bigizi/Math-Magician-React-App/issues/4).
+Feel free to check the [Issues](coming soon).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
