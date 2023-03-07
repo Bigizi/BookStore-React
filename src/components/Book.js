@@ -1,14 +1,22 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+import { useDispatch, useSelector } from 'react-redux';
+import { removeBook } from '../redux/books/Books';
 
-const Book = (props) => {
-  const { book } = props;
+const Book = () => {
+  // const { book } = props;
+  const book = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+
+  const handleRemove = (bookId) => {
+    dispatch(removeBook(bookId));
+    console.log(bookId);
+  };
   const styles = {
     content: {
       display: 'flex',
       flexDirection: 'row',
       gap: '6px',
-    //   padding: '5px',
     },
     para: {
       fontWeight: 'bold',
@@ -21,22 +29,16 @@ const Book = (props) => {
           <p className="para" style={styles.para}>{book.title}</p>
           <p>{book.author}</p>
           <span>
-            <button type="button">Remove</button>
+            {/* <button type="button">Comments</button> */}
+            <button type="button" onClick={() => handleRemove(book.id)}>
+              Remove
+            </button>
+            {/* <button type="button">Edit</button> */}
           </span>
         </div>
       ))}
     </div>
   );
-};
-
-Book.propTypes = {
-  book: PropTypes.arrayOf(PropTypes.shape(
-    {
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    },
-  )).isRequired,
 };
 
 export default Book;
