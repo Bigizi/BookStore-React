@@ -2,6 +2,7 @@ import React from 'react';
 
 const Categories = () => {
   const handleClick = () => {
+    // console.log('Under construction');
   };
 
   return (
