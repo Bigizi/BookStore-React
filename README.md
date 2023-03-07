@@ -1,4 +1,4 @@
-## Math-Magician-React-project
+## Book-Store-React-Redux-project
 
 <a name="readme-top"></a>
 
