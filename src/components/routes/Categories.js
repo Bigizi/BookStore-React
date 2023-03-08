@@ -4,9 +4,6 @@ import { checkStatus } from '../../redux/categories/Categories';
 
 const Categories = () => {
   const dispatch = useDispatch();
-  // const handleClick = () => {
-  //   // console.log('Under construction');
-  // };
 
   return (
     <div className="categories">
