@@ -1,5 +1,4 @@
-// /* eslint-disable no-param-reassign */
-// /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
