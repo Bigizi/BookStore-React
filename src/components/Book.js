@@ -1,13 +1,22 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-undef */
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { removeBook } from '../redux/books/Books';
+import { useDispatch } from 'react-redux';
+import { booksActions, removeBookAsync } from '../redux/books/Books';
+import Button from './Button';
 
-const Book = () => {
-  const book = useSelector((state) => state.books);
+const Book = (props) => {
   const dispatch = useDispatch();
+  const {
+    title, author, id, category,
+  } = props;
 
-  const handleRemove = (bookId) => {
-    dispatch(removeBook(bookId));
+  const handleRemove = (e) => {
+    const { id } = e.target.dataset;
+    dispatch(booksActions.removeBook(id));
+
+    // Delete in the backend
+    dispatch(removeBookAsync(id));
   };
   const styles = {
     content: {
@@ -21,17 +30,31 @@ const Book = () => {
   };
   return (
     <div className="book-container">
-      {book.map((book) => (
-        <div key={book.id} className="content" style={styles.content}>
-          <p className="para" style={styles.para}>{book.title}</p>
-          <p>{book.author}</p>
-          <span>
-            <button type="button" onClick={() => handleRemove(book.id)}>
-              Remove
-            </button>
-          </span>
+      <div className="content" style={styles.content}>
+        <span>{category}</span>
+        <p className="para" style={styles.para}>{title}</p>
+        <p>{author}</p>
+        <Button type="submit" dataId={id} handleClick={handleRemove}>
+          Remove
+        </Button>
+        <Button type="button" data-id={id}>
+          <span>Edit</span>
+        </Button>
+      </div>
+      <div>
+        <div>
+          <span>70%</span>
+          <span>Completed</span>
         </div>
-      ))}
+      </div>
+      <div>
+        <span>Current Chapter</span>
+        <h4>Chapter 56</h4>
+        <button type="button" className="progress-btn">
+          Update progress
+        </button>
+      </div>
+
     </div>
   );
 };
