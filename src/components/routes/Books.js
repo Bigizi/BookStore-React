@@ -16,13 +16,13 @@ function Books() {
   if (isLoading) output = <h4>Loading...</h4>;
 
   if (books?.length > 0) {
-    output = books.map((indexx) => (
+    output = books.map((index) => (
       <Book
-        key={indexx.item_id}
-        id={indexx.item_id}
-        title={indexx.title}
-        author={indexx.author}
-        category={indexx.category}
+        key={index.item_id}
+        id={index.item_id}
+        title={index.title}
+        author={index.author}
+        category={index.category}
       />
     ));
   }
