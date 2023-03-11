@@ -12,7 +12,6 @@ const NewBook = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // if (!title.trim() || !author.trim()) return;
 
     const bookData = {
       item_id: crypto.randomUUID(),
