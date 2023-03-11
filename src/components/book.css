@@ -25,6 +25,8 @@
   width: 100%;
   height: 1.813rem;
   font-size: 1.375rem;
+  color: black;
+  font-weight: bold;
 }
 
 .author {
@@ -40,7 +42,7 @@
   display: flex;
 }
 
-.interact-btns {
+.button {
   height: 1.188rem;
   font-size: 0.875rem;
   font-weight: 300;
@@ -48,6 +50,7 @@
   border: none;
   margin-top: 10px;
   margin-right: 5px;
+  background-color: white;
 }
 
 .prg {
