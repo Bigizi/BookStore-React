@@ -1,11 +1,14 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { booksActions, removeBookAsync } from '../redux/books/Books';
 import Button from './Button';
+import './book.css';
+import Progress from './Circle';
 
 const Book = (props) => {
+  const [randomPer] = useState(Math.floor(Math.random() * 90 + 10));
   const dispatch = useDispatch();
   const {
     title, author, id, category,
@@ -18,44 +21,51 @@ const Book = (props) => {
     // Delete in the backend
     dispatch(removeBookAsync(id));
   };
-  const styles = {
-    content: {
-      display: 'flex',
-      flexDirection: 'row',
-      gap: '6px',
-    },
-    para: {
-      fontWeight: 'bold',
-    },
-  };
-  return (
-    <div className="book-container">
-      <div className="content" style={styles.content}>
-        <span>{category}</span>
-        <p className="para" style={styles.para}>{title}</p>
-        <p>{author}</p>
-        <Button type="submit" dataId={id} handleClick={handleRemove}>
-          Remove
-        </Button>
-        <Button type="button" data-id={id}>
-          <span>Edit</span>
-        </Button>
-      </div>
-      <div>
-        <div>
-          <span>70%</span>
-          <span>Completed</span>
-        </div>
-      </div>
-      <div>
-        <span>Current Chapter</span>
-        <h4>Chapter 56</h4>
-        <button type="button" className="progress-btn">
-          Update progress
-        </button>
-      </div>
 
-    </div>
+  return (
+    <article className="book-cont">
+      <section className="cat-sec">
+        <span className="category">{category}</span>
+        <h2 className="title">{title}</h2>
+        <p className="author">{author}</p>
+        <div className="interact-btns-cont">
+          <Button
+            className="interact-btns"
+            type="submit"
+            dataId={id}
+            handleClick={handleRemove}
+          >
+            Comment
+          </Button>
+          <Button
+            className="interact-btns"
+            type="submit"
+            dataId={id}
+            handleClick={handleRemove}
+          >
+            Remove
+          </Button>
+          <Button className="interact-btns" type="button" data-id={id}>
+            Edit
+          </Button>
+        </div>
+      </section>
+
+      <section className="prg">
+        <Progress progress={randomPer} />
+      </section>
+
+      <section className="chapters-sec">
+        <div className="line" />
+        <div>
+          <span className="chapter-sec-head">Current Chapter</span>
+          <p className="chapter">Chapter 5</p>
+          <button type="button" className="update-progress">
+            Update progress
+          </button>
+        </div>
+      </section>
+    </article>
   );
 };
 

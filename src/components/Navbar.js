@@ -1,28 +1,21 @@
 import React from 'react';
+import { Icon } from '@iconify/react';
 import { Outlet, Link } from 'react-router-dom';
+import './navbar.css';
 
 function Navbar() {
-  const styles = {
-    lists: {
-      display: 'flex',
-      flexDirection: 'row',
-    },
-
-    list: {
-      display: 'inline',
-      padding: '10px',
-    },
-  };
   return (
-    <>
-      <div>
-        <ul className="lists" style={styles.lists}>
-          <li className="list" style={styles.list}><Link to="/">Books</Link></li>
-          <li className="list" style={styles.list}><Link to="categories">Categories</Link></li>
+    <nav>
+      <div className="ulDiv">
+        <ul>
+          <h2 style={{ fontWeight: 'bold' }}>BookStore CMS</h2>
+          <li><Link to="/" className="links">BOOKS</Link></li>
+          <li><Link to="categories" className="links">CATEGORIES</Link></li>
+          <span className="usr-icon-cont"><Icon className="icon" icon="mingcute:user-3-fill" /></span>
         </ul>
       </div>
       <Outlet />
-    </>
+    </nav>
   );
 }
 

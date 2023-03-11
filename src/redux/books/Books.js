@@ -3,7 +3,6 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const BASE_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/caWRrZKKfOMTqyQBJwx4';
-
 export const addBookAsync = createAsyncThunk(
   'books/postBook',
   async (bookData, thunkAPI) => {
@@ -110,5 +109,4 @@ const bookSlice = createSlice({
 });
 
 export const booksActions = bookSlice.actions;
-
 export default bookSlice.reducer;
