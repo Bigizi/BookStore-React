@@ -31,12 +31,13 @@ function Books() {
     output = <h4>No books available, Please add book</h4>;
   }
   return (
-    <div className="book-container">
+    <>
       <div className="row">
         <ul className="books-list">{output}</ul>
       </div>
+      <div className="hr" />
       <NewBook />
-    </div>
+    </>
   );
 }
 
