@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-undef */
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { booksActions, removeBookAsync } from '../redux/books/Books';
 import Button from './Button';
@@ -30,7 +30,7 @@ const Book = (props) => {
         <p className="author">{author}</p>
         <div className="interact-btns-cont">
           <Button
-            className="interact-btn"
+            className="interact-btns"
             type="submit"
             dataId={id}
             handleClick={handleRemove}
@@ -38,14 +38,14 @@ const Book = (props) => {
             Comment
           </Button>
           <Button
-            className="interact-btn"
+            className="interact-btns"
             type="submit"
             dataId={id}
             handleClick={handleRemove}
           >
             Remove
           </Button>
-          <Button className="interact-btn" type="button" data-id={id}>
+          <Button className="interact-btns" type="button" data-id={id}>
             Edit
           </Button>
         </div>

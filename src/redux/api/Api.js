@@ -2,7 +2,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const BOOK_API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/3VBw7OE2BvfbGoXIKOFd/books';
+const BOOK_API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/h4zrUJE93rUCQe9rGkss/books';
 
 const fetchBooks = async () => {
   const response = await axios.get(BOOK_API_URL);

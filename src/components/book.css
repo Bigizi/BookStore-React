@@ -1,8 +1,9 @@
 
+
 .book-cont {
-  margin-left: -70%;
-  margin-top: 20px;
-  width: 90%;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  width: 96%;
   height: 10.625rem;
   border-radius: 4px;
   display: flex;
@@ -36,16 +37,11 @@
   color: #4386bf;
 }
 
-.interact-btns-cont :nth-child(2) {
-  border-right: 1px solid #e8e8e8;
-  border-left: 1px solid #e8e8e8;
+.interact-btns-cont {
+  display: flex;
 }
 
-.interact-btns-cont :nth-child(1) {
-  padding-left: 0;
-}
-
-.interact-btn {
+.interact-btns {
   height: 1.188rem;
   font-size: 0.875rem;
   font-weight: 300;
@@ -53,7 +49,7 @@
   border: none;
   margin-top: 10px;
   margin-right: 5px;
-  background-color: #fff;
+  border: none;
 }
 
 .prg {
